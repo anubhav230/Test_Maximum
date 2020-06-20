@@ -27,4 +27,11 @@ public class MaximumTest {
         Assert.assertEquals(maximum.findMaximum(maxInt),maxInt[0]);
     }
 
+    @Test
+    public void givenFloat_WhenProper_ShouldReturnTrue() {
+        Maximum maximum = new Maximum();
+        Float maxInt[] = {23.4f, 50.2f,9.5f};
+        Assert.assertEquals(maximum.findMaximum(maxInt),maxInt[1]);
+    }
+
 }

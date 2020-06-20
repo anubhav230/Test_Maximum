@@ -14,4 +14,13 @@ public class Maximum {
         }
         return max;
     }
+
+    public Float findMaximum(Float[] maxInt ) {
+        Float max = 0f;
+        for (Float index : maxInt) {
+            if (index.compareTo(max) > 0)
+                max = index;
+        }
+        return max;
+    }
 }
