@@ -14,9 +14,16 @@ public class MaximumTest {
     }
 
     @Test
-    public void givenInteger_WhenWrong_ShouldReturnFalse() {
+    public void givenInteger_WhenProperSecond_ShouldReturnTrue() {
         Maximum maximum = new Maximum();
         Integer maxInt[] = {10, 8, 1};
+        Assert.assertEquals(maximum.findMaximum(maxInt),maxInt[0]);
+    }
+
+    @Test
+    public void givenInteger_WhenProperThird_ShouldReturnTrue() {
+        Maximum maximum = new Maximum();
+        Integer maxInt[] = {23, 6,9};
         Assert.assertEquals(maximum.findMaximum(maxInt),maxInt[0]);
     }
 
