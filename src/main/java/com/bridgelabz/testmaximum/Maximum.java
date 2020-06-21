@@ -2,25 +2,20 @@ package com.bridgelabz.testmaximum;
 
 public class Maximum {
     /**
+     * generic method for returning maximum value
      *
-     * @param maxInt
+     * @param firstValue
+     * @param secondValue
+     * @param thirdValue
+     * @param <E>
      * @return
      */
-    public Integer findMaximum(Integer[] maxInt ) {
-        Integer max = 0;
-        for (Integer index : maxInt) {
-            if (index.compareTo(max) > 0)
-                max = index;
-        }
-        return max;
-    }
-
-    public Float findMaximum(Float[] maxInt ) {
-        Float max = 0f;
-        for (Float index : maxInt) {
-            if (index.compareTo(max) > 0)
-                max = index;
-        }
-        return max;
+    public <E extends Comparable<E>> E findMaximum(E firstValue, E secondValue, E thirdValue) {
+        if (firstValue.compareTo(secondValue) > 0 && firstValue.compareTo(thirdValue) > 0)
+            return firstValue;
+        else if (secondValue.compareTo(thirdValue) > 0 && secondValue.compareTo(firstValue) > 0)
+            return secondValue;
+        else
+            return thirdValue;
     }
 }
