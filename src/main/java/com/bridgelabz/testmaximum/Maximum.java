@@ -1,35 +1,23 @@
 package com.bridgelabz.testmaximum;
 
-public class Maximum<E extends Comparable<E>> {
-    private E firstValue;
-    private E secondValue;
-    private E thirdValue;
+import java.util.Arrays;
 
-    public Maximum(E firstValue, E secondValue, E thirdValue) {
-        this.firstValue = firstValue;
-        this.secondValue = secondValue;
-        this.thirdValue = thirdValue;
+
+public class Maximum<E extends Comparable<E>> {
+    public Maximum() {
+
     }
 
     /**
-     * method to fid maximum value of generic type
-     *
-     * @param firstValue
-     * @param secondValue
-     * @param thirdValue
+     * @param val
      * @param <E>
      * @return
      */
-    public <E extends Comparable<E>> E findMaximum(E firstValue, E secondValue, E thirdValue) {
-        if (firstValue.compareTo(secondValue) > 0 && firstValue.compareTo(thirdValue) > 0)
-            return firstValue;
-        else if (secondValue.compareTo(thirdValue) > 0 && secondValue.compareTo(firstValue) > 0)
-            return secondValue;
-        else
-            return thirdValue;
-    }
+    public <E extends Comparable<E>> E findMaximum(E... val) {
 
-    public E findMaximum() {
-        return findMaximum(firstValue, secondValue, thirdValue);
+        E[] value = val;
+        int length = value.length;
+        Arrays.sort(value);
+        return value[length - 1];
     }
 }
