@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumTest {
-
     @Test
     public void givenInteger_WhenProper_ShouldReturnTrue() {
         Maximum maximum = new Maximum();
