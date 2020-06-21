@@ -1,6 +1,6 @@
 package com.bridgelabz.test;
 
-import com.bridgelabz.service.Maximum;
+import com.bridgelabz.maximumtest.Maximum;
 import org.junit.Assert;
 import org.junit.Test;
 
