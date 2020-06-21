@@ -1,23 +1,21 @@
-package com.bridgelabz.testmaximum;
+package com.bridgelabz.service;
 
 import java.util.Arrays;
 
 
 public class Maximum<E extends Comparable<E>> {
-    public Maximum() {
-
-    }
 
     /**
      * @param val
      * @param <E>
      * @return
      */
-    public <E extends Comparable<E>> E findMaximum(E... val) {
-
+    public <E extends Comparable<E>> E findMaximum(E...val) {
         E[] value = val;
         int length = value.length;
         Arrays.sort(value);
-        return value[length - 1];
+        E max = value[length - 1];
+        System.out.println(max);
+        return max;
     }
 }
