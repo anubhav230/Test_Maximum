@@ -1,8 +1,18 @@
 package com.bridgelabz.testmaximum;
 
-public class Maximum {
+public class Maximum<E extends Comparable<E>> {
+    private E firstValue;
+    private E secondValue;
+    private E thirdValue;
+
+    public Maximum(E firstValue, E secondValue, E thirdValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
+
     /**
-     * generic method for returning maximum value
+     * method to fid maximum value of generic type
      *
      * @param firstValue
      * @param secondValue
@@ -17,5 +27,9 @@ public class Maximum {
             return secondValue;
         else
             return thirdValue;
+    }
+
+    public E findMaximum() {
+        return findMaximum(firstValue, secondValue, thirdValue);
     }
 }
