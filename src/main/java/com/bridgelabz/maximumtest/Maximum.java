@@ -2,19 +2,19 @@ package com.bridgelabz.maximumtest;
 
 import java.util.Arrays;
 
-
-public class Maximum<E extends Comparable<E>> {
-
+public class Maximum<E> {
     /**
-     * @param val
-     * @param <E>
+     * Method to sort and find out maximum value from array
+     *
+     * @param value
      * @return
      */
-    public <E extends Comparable<E>> E findMaximum(E...val) {
-        int length = val.length;
-        Arrays.sort(val);
-        E max = val[length - 1];
+    public E findMaximum(E... value) {
+        int length = value.length;
+        Arrays.sort(value);
+        E max = value[length - 1];
         System.out.println(max);
         return max;
     }
+
 }
